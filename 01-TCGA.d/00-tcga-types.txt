@@ -1,0 +1,13 @@
+# Define TCGA related type identifiers
+[typedefs]
+bio.tcga.barcode.sample					= TCGA barcode: TCGA-centerid-sampleid
+bio.tcga.barcode.sample.vial				= TCGA barcode: TCGA-centerid-sampleid-vial
+bio.tcga.barcode.sample.vial.portion			= TCGA barcode: TCGA-centerid-sampleid-vial-portion
+bio.tcga.barcode.sample.vial.portion.analyte		= TCGA barcode: TCGA-centerid-sampleid-vial-portion-analyte
+bio.tcga.barcode.sample.vial.portion.analyte.aliquot	= TCGA barcode: TCGA-centerid-sampleid-vial-portion-analyte-aliquot
+
+[typemap]
+srctype=bio.tcga.barcode.sample.vial.portion.analyte.aliquot,bio.tcga.barcode.sample.vial.portion.analyte,bio.tcga.barcode.sample.vial.portion,bio.tcga.barcode.sample.vial
+dsttype=bio.tcga.barcode.sample
+stringop=split('-').slice(0,3).join('-')
+
