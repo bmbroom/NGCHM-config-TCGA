@@ -6,7 +6,7 @@
  */
 function openCBIOPartPage (studyid, ids) {
     var part = ids[0].substr(0,12);
-    window.open('http://www.cbioportal.org/public-portal/tumormap.do?cancer_study_id=' + studyid + '&case_id=' + part, 'cbio');
+    window.open('http://www.cbioportal.org/case.do?cancer_study_id=' + studyid + '&case_id=' + part, 'cbio');
 }
 
 /** @axisfunction bio.gene.hugo
@@ -16,6 +16,6 @@ function openCBIOPartPage (studyid, ids) {
  *  @extraparams bio.cbioportal.studyid
  */
 function openCBIOGenes (studyid, genes) {
-    window.open('http://www.cbioportal.org/public-portal/link.do?cancer_study_id=' + studyid + '&gene_list=' + genes, 'cbio');
+    window.open('http://www.cbioportal.org/ln?cancer_study_id=' + studyid + '&gene_list=' + genes.join("+"), 'cbio');
 }
 
