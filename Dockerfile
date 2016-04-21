@@ -1,4 +1,4 @@
 FROM busybox:latest
-ADD 01-TCGA.d /etc/ngchm/conf.d/01-TCGA.d
-VOLUME /etc/ngchm/conf.d/01-TCGA.d
+ADD 10-TCGA.d /etc/ngchm/conf.d/10-TCGA.d
+VOLUME /etc/ngchm/conf.d/10-TCGA.d
 ENTRYPOINT ["/bin/true"]
